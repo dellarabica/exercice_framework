@@ -23,3 +23,20 @@ function listOnlineUsers()
 
     require('./view/front/onlineUsers.php');
 }
+
+function delUser(){
+    $users = getUsers();
+
+    require('./view/front/deleteUser.php');
+}
+
+function removeUser(){
+    $delete = del($_GET['id']);
+    $reset = resetPK();
+    if ($reset === false) {
+        die('Erreur !');
+    }
+    else {
+        header('Location: index.php?action=listUser');
+    }
+}

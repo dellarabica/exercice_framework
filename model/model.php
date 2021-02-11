@@ -21,6 +21,18 @@ function getInfo($userId)
     return $req;
 }
 
+function del($id){
+    $db = dbConnect();
+    $str = 'DELETE FROM user WHERE id= \''.$id.'\'';
+    $req = $db->query($str);
+    return $req;
+}
+
+function resetPK(){
+    $db = dbConnect();
+    $req = $db->query('ALTER TABLE user AUTO_INCREMENT = 0'); //reset primary key
+    return $req;
+}
 function dbConnect()
 {
     try

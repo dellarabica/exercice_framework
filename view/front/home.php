@@ -35,17 +35,17 @@
 $users->closeCursor();
 ?>
 </table>
-
+<br/>
 <a href="index.php?action=onlineOnly">
 <input type="submit" value="Afficher uniquement les personnes en ligne">
 </a>
 <!--
 <a href="index.php?action=addUser">
 <input type="submit" value="Ajouter un utilisateur">
-</a>
+</a>-->
 <a href="index.php?action=removeUser">
 <input type="submit" value="Retirer un utilisateur">
-</a>-->
+</a>
 <?php $content = ob_get_clean(); ?>
 
 <?php require('template.php'); ?>

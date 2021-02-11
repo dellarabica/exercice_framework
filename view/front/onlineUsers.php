@@ -35,7 +35,7 @@
 $users->closeCursor();
 ?>
 </table>
-
+<br/>
 <a href="index.php?action=listUser">
 <input type="submit" value="Afficher tout le monde">
 <!--
