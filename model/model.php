@@ -21,6 +21,14 @@ function getInfo($userId)
     return $req;
 }
 
+function add($username, $password, $firstname, $familyname, $gender, $birth, $online){
+    $db = dbConnect();
+    $str = "INSERT INTO user(username, password, first_name, family_name, gender, birth_date, registration_date, is_online) VALUES('$username', '$password', '$firstname', '$familyname', '$gender', '$birth', NOW(), '$online.')";
+    $req = $db->query($str);
+    echo $str;
+    return $req;
+}
+
 function del($id){
     $db = dbConnect();
     $str = 'DELETE FROM user WHERE id= \''.$id.'\'';
@@ -33,6 +41,7 @@ function resetPK(){
     $req = $db->query('ALTER TABLE user AUTO_INCREMENT = 0'); //reset primary key
     return $req;
 }
+
 function dbConnect()
 {
     try

@@ -8,12 +8,11 @@
     </head>
         
     <body>
-    <div id="Header">
+        <div id="Header">
             <h1 class="text-center" id="headtitle">&#60;Insérer le nom du blog ici&#62;</h1>
         </div>
-    <div class="col-md-12" id="Body">
-        <?= $content ?>
-    </div>
-        
+        <div class="col-md-12" id="Body">
+            <?= $content ?>
+        </div>
     </body>
 </html>
