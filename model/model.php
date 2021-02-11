@@ -16,7 +16,7 @@ function getUsersOnline()
 function getInfo($userId)
 {
     $db = dbConnect();
-    $str = 'SELECT username, first_name, family_name, gender, DATE_FORMAT(birth_date, \'%d/%m/%Y\') AS birth_date_fr, DATE_FORMAT(registration_date, \'%d/%m/%Y\') AS registration_date_fr FROM user WHERE id =\''.$userId.'\'';
+    $str = 'SELECT username, first_name, family_name, gender, DATE_FORMAT(birth_date, \'%d/%m/%Y\') AS birth_date_fr, DATE_FORMAT(registration_date, \'%d/%m/%Y à %H:%i:%s\') AS registration_date_fr FROM user WHERE id =\''.$userId.'\'';
     $req = $db->query($str);
     return $req;
 }

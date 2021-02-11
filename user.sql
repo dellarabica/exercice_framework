@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Feb 11, 2021 at 03:48 AM
+-- Generation Time: Feb 11, 2021 at 09:54 AM
 -- Server version: 5.7.24
 -- PHP Version: 7.4.1
 
@@ -36,7 +36,7 @@ CREATE TABLE `user` (
   `family_name` text NOT NULL,
   `gender` varchar(1) NOT NULL,
   `birth_date` date NOT NULL,
-  `registration_date` date NOT NULL,
+  `registration_date` datetime NOT NULL,
   `is_online` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -45,8 +45,8 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id`, `username`, `password`, `first_name`, `family_name`, `gender`, `birth_date`, `registration_date`, `is_online`) VALUES
-(2, 'dellarabica', '@@@{[{~#\\64645dF', 'Benoît', 'Triopont', 'X', '2002-10-08', '2021-02-10', 0),
-(3, 'asasas', 'dffddfhgJJZHJ', 'Axel', 'Emléfrez', 'M', '2000-01-31', '2021-02-11', 1);
+(2, 'dellarabica', '@@@{[{~#\\64645dF', 'Benoît', 'Triopont', 'X', '2002-10-08', '2021-02-10 00:00:00', 0),
+(3, 'asasas', 'dffddfhgJJZHJ', 'Axel', 'Emléfrez', 'M', '2000-01-31', '2021-02-11 00:00:00', 1);
 
 --
 -- Indexes for dumped tables
